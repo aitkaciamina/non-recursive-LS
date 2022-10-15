@@ -1,0 +1,39 @@
+
+// NON RECURSIVE LINEAR SEARCH
+#include <iostream>
+#define MAX 100
+using namespace std;
+void linear_search(int arr[], int key, int size)
+{
+    int p=-1;
+    for (int i=0 ; i<size; i++)
+    {
+        if(arr[i]==key)
+        {
+            p=i;
+            break;
+        }
+        if(p==-1) 
+             cout<<" not found ! "<<endl;
+        else
+             cout<<"found at pos : "<<p<<endl;
+    }
+    
+}
+int main()
+{
+    int n;
+    int k;
+    int arr[MAX];
+    cout<<" enter the num of elements : "<<endl;
+    cin>> n;
+    cout<<" enter the elemnts : "<<endl;
+    for (int i=0 ; i<n; i++)
+    {
+        cin>>arr[i];
+    }
+    cout<<"enter the num ur looking 4 : "<<endl;
+    cin>>k;
+    linear_search( arr, k, n);
+    return 0;
+}
